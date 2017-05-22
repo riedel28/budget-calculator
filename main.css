@@ -14,7 +14,89 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #555;
+    /*color: #555;*/
     position: relative;
     height: 100vh;
+}
+
+.right { float: right; }
+.red { color: #FF5049; }
+.red-focus:focus { border: 1px solid #FF5049; }
+
+.top {
+    height: 40vh;
+    background-color: #7fffd4;
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    position: relative;
+    color: #000080;
+    font-weight: bold;
+}
+
+.budget {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.budget__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    /*font-weight: 400;*/
+}
+
+.budget__value {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income,
+.budget__expenses {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget__income {
+    margin-bottom: 10px;
+    background-color: #1e90ff;
+}
+
+.budget__expenses {
+    background-color: #ee82ee;
+}
+
+.budget__income--text,
+.budget__expenses--text {
+    float: left;
+    font-size: 13px;
+    /*color: #444;*/
+    margin-top: 2px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+    letter-spacing: 1px;
+    float: left;
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
+.budget__expenses--percentage {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px;
 }
