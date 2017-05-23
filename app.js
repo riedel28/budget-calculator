@@ -20,6 +20,7 @@ var budgetController = (function() {
 
 var UIController = (function() {
 
+
   var DOMStrings = {
     inputType: '.add__type',
     inputDescription: '.add__description',
@@ -51,7 +52,20 @@ var UIController = (function() {
 
 var controller = (function(budgetCtrl, UICtrl) {
 
-  var DOM = UICtrl.getDOMstrings();
+  var setupEventListeners = function() {
+
+    var DOM = UICtrl.getDOMstrings();
+
+    document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
+
+    document.addEventListener('keypress', function(e) {
+
+      if (e.keyCode === 13 || e.which === 13) {
+        ctrlAddItem();
+      }
+    });
+  };
+
 
   var ctrlAddItem = function() {
 
@@ -67,17 +81,16 @@ var controller = (function(budgetCtrl, UICtrl) {
 
     // 5. Display the budget on the UI
 
+  };
 
+  return {
+    init: function() {
+      console.log('Application has started!');
+      setupEventListeners();
+    }
   }
 
-  document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-
-  document.addEventListener('keypress', function(e) {
-
-    if (e.keyCode === 13 || e.which === 13) {
-      ctrlAddItem();
-    }
-
-  });
 
 })(budgetController, UIController);
+
+controller.init();
