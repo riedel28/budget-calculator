@@ -14,7 +14,7 @@ body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    height: 100vh;
+    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
 }
@@ -28,7 +28,7 @@ body {
 .red-focus:focus { border: 1px solid #FF5049; }
 
 .top {
-    height: 50vh;
+    /*height: 50vh;*/
     /*height: 800px;*/
     background-color: #7fffd4;
     color: #000080;
@@ -36,6 +36,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .budget {
