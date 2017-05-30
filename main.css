@@ -24,8 +24,8 @@ body {
     margin-left: auto;
 }
 
-.red { color: #FF5049; }
-.red-focus:focus { border: 1px solid #FF5049; }
+.red { color: #FF1493 !important; }
+.red-focus:focus { border: 1px solid #FF1493 !important; }
 
 .top {
     /*height: 50vh;*/
